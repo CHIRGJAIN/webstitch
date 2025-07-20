@@ -1,0 +1,84 @@
+/* Header.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b2447;
+  color: white;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Hide toggle by default */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Icons */
+.icons {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+}
+
+/* Desktop nav */
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links ul li {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-links ul li:hover {
+  color: #ffaa00;
+}
+
+/* ------------ Responsive Styles ------------ */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #0b2447;
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 0;
+  }
+
+  .icons {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+}
